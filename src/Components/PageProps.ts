@@ -1,6 +1,6 @@
 type PageProps = {
     name: string,
     setCurrentPage : (openPage:number)=>void,
-    goBack : ()=>void
+    goBack : ()=>void,
 };
 export default PageProps;

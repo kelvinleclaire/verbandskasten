@@ -6,7 +6,6 @@ import {BasePage} from "./BasePage";
 export class Page11 extends BasePage {
   constructor(props:PageProps) {
     super(props);
-    this.setCurrentPage.bind(this);
   }
     render(): React.ReactElement {
         return(

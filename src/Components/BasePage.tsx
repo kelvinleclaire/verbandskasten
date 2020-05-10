@@ -2,6 +2,7 @@ import React from "react";
 import PageProps from "./PageProps";
 import { BackButton } from "./backButton";
 
+
 export class BasePage extends React.Component<PageProps> {
   constructor(props:PageProps) {
     super(props);

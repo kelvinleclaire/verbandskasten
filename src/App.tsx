@@ -1,18 +1,18 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Page2 } from "./Components/Page2";
-import { Page1 } from "./Components/Page1";
-import { Page3 } from "./Components/Page3";
-import { Page4 } from "./Components/Page4";
-import { Page5 } from "./Components/Page5";
-import { Page6 } from "./Components/Page6";
-import { Page7 } from "./Components/Page7";
-import { Page8 } from "./Components/Page8";
-import { Page9 } from "./Components/Page9";
-import { Page10 } from "./Components/Page10";
-import { Page11 } from "./Components/Page11";
-import { Page12 } from "./Components/Page12";
+import { Page2 } from "./Components/Pages/Page2";
+import { Page1 } from "./Components/Pages/Page1";
+import { Page3 } from "./Components/Pages/Page3";
+import { Page4 } from "./Components/Pages/Page4";
+import { Page5 } from "./Components/Pages/Page5";
+import { Page6 } from "./Components/Pages/Page6";
+import { Page7 } from "./Components/Pages/Page7";
+import { Page8 } from "./Components/Pages/Page8";
+import { Page9 } from "./Components/Pages/Page9";
+import { Page10 } from "./Components/Pages/Page10";
+import { Page11 } from "./Components/Pages/Page11";
+import { Page12 } from "./Components/Pages/Page12";
 
 type MainProps = {};
 type MainState = {
@@ -138,13 +138,12 @@ export default class Main extends React.Component<MainProps, MainState> {
 
   private setCurrentPage(openPage: number): void {
     let history :Array<number> = this.state.pageHistory;
-    history.push(openPage);
+    history.push(this.state.currentPage);
     this.setState({pageHistory:history});
     this.setState({ currentPage: openPage });
   }
   private goBack(): void {
     let history :Array<number> = this.state.pageHistory;
-    history.pop();
     let safeCurrentPage: number|undefined = history.pop();
     if(safeCurrentPage) {
       this.setState({ currentPage: safeCurrentPage,pageHistory:history });

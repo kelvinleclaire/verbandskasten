@@ -1,6 +1,7 @@
 import React from "react";
 import PageProps from "./PageProps";
 import { BackButton } from "./backButton";
+import * as styles from "./css/PageStyle";
 
 
 export class BasePage extends React.Component<PageProps> {

@@ -12,7 +12,7 @@ export class Page5 extends BasePage {
   }
     render(): React.ReactElement {
         return(
-          <Layout>
+          <Layout className="regularPage">
           <h1 style={styles.textStyleH1}>  Bitte senden Sie Ihre Sachspende an folgende Adresse: </h1>
           <button onClick ={()=>this.setCurrentPage(3)}>Ben Kolzau</button>
           <h2 style={styles.textStyleH2}>Vielen Dank für die Spende Ihrer Verbandsmaterialien!</h2>

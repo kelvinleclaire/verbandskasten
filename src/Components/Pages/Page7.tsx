@@ -12,7 +12,7 @@ export class Page7 extends BasePage {
   }
     render(): React.ReactElement {
         return(
-          <Layout>
+          <Layout className="regularPage">
             <h1 style={styles.textStyleH1}>  Hello, {this.props.name} </h1>
             <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(3)}>Einmalig</button>
             <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(10)}>Sammelaktion für Mitglieder und/ oder Mitarbeiter</button>

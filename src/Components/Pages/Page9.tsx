@@ -11,7 +11,7 @@ export class Page9 extends BasePage {
   }
     render(): React.ReactElement {
         return(
-          <Layout>
+          <Layout className="regularPage">
         <h1 style={styles.textStyleH1}>Wir freuen uns sehr, dass Sie Ihren Kunden und/oder Mitarbeitern das Spenden 
             abgelaufener Verbandsmaterialien ermöglichen möchten. 
             Setzen Sie sich dazu bitte über das unten stehende Formular mit uns in Verbindung.</h1>

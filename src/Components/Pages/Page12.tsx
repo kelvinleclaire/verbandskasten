@@ -12,7 +12,7 @@ export class Page12 extends BasePage {
   }
     render(): React.ReactElement {
         return(
-          <Layout>
+          <Layout className="regularPage">
         <h1 style={styles.textStyleH1}>
             Gerne finden wir eine individuelle Lösung für den ​
             Transport Ihrer Spende. Setzen Sie sich dazu bitte über ​

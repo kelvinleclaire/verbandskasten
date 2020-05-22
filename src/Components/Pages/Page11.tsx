@@ -12,7 +12,7 @@ export class Page11 extends BasePage {
   }
     render(): React.ReactElement {
         return(
-          <Layout>
+          <Layout className="regularPage">
              <h1 style={styles.textStyleH1}>
               Vielen Dank für Ihr Interesse und Ihre Anfrage! Wir setzen uns​
               schnellstmöglich mit Ihnen in Verbindung. Bitte haben Sie​

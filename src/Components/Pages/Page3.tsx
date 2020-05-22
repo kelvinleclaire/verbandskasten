@@ -13,7 +13,7 @@ export class Page3 extends BasePage {
   }
     render(): React.ReactElement {
         return(
-          <Layout>
+          <Layout className="regularPage">
             <h1 style={styles.textStyleH1}>  Wie viele Verbandskästen möchten Sie ungefähr spenden? </h1>
             <input type="range" min="1" max=">50" /*value="1" class="slider"*/ id="mySlider"></input>
             <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(7)}>Weiter</button>

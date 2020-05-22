@@ -10,13 +10,17 @@ export const pageBackground : CSS.Properties= {
 export const buttonStyle : CSS.Properties= {
         backgroundColor: "#E1112C",
         textAlign: "center",
-        fontSize: "28px",
+        fontSize: "22px",
         borderRadius: "25px",
-        width: "200px",
+        width: "300px",
         height: "100px",
         fontFamily: "OpenSansBold",
         fontWeight: "bold",
-        color: "white"
+        color: "white",
+};
+export const payPalButtonStyle : CSS.Properties= {
+        width: "200px",
+        height: "100px",
 };
 
 export const textStyleH1 : CSS.Properties= {
@@ -28,6 +32,14 @@ export const textStyleH1 : CSS.Properties= {
 export const textStyleH2 : CSS.Properties= {
     fontFamily: "OpenSansBold",
     fontSize: "16px",
-}
+};
+
+export const gridContainer: CSS.Properties={
+    display:"grid",
+    gridTemplateColumns: "1fr",
+    gridTemplateRows: "1fr 1fr 1fr 1fr",
+    gap: "70px 0px",
+    gridTemplateAreas: "'.' '.' '.' '.'"
+};
 
 

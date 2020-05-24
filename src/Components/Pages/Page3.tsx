@@ -21,7 +21,7 @@ export class Page3 extends BasePage {
             </div>
             <div>
               1
-            <input style={styles.sliderStyle} type="range" min="1" max="50" value="1" /*class="slider"*/ id="mySlider"></input>
+            <input style={styles.sliderStyle} type="range" min="1" max="50" /*value="1" class="slider"*/ id="mySlider"></input>
             >50
             </div>
             <div>

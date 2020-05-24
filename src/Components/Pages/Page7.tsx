@@ -17,10 +17,22 @@ export class Page7 extends BasePage {
               <div></div>
               <div>
                 <h1 style={styles.textStyleH1}>  Wie häufig möchten Sie spenden? </h1>
-                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(3)}>Einmalig</button>
-                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(10)}>Sammelaktion für Mitglieder und/ oder Mitarbeiter</button>
-                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(8)}>Regelmäßig</button>
                 </div>
+                
+                <table style={styles.tableStyle}>
+                  <tr>
+                    <td>
+                    <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(3)}>Einmalig</button>
+                    </td>
+                    <td>
+                      <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(10)}>Sammelaktion für Mitglieder und/ oder Mitarbeiter</button>
+                    </td>
+                    <td>
+                      <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(8)}>Regelmäßig</button>
+                    </td>                                                          
+                  </tr>
+                </table>
+                
                 <div>
                 <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>
               </div>

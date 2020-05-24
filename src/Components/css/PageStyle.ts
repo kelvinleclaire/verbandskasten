@@ -29,6 +29,18 @@ export const backButtonStyle: CSS.Properties= {
     color: "white",
 }
 
+export const fromularButtonStyle: CSS.Properties= {
+    backgroundColor: "#E1112C",
+    textAlign: "center",
+    fontSize: "30px",
+    borderRadius: "25px",
+    width: "600px",
+    height: "400px",
+    fontFamily: "OpenSansBold",
+    fontWeight: "bold",
+    color: "white",
+}
+
 export const payPalButtonStyle : CSS.Properties= {
         width: "200px",
         height: "100px",
@@ -57,6 +69,11 @@ export const sliderStyle: CSS.Properties= {
     width: "70%",
     height: "8.4px",
     background: "#E1112C",        
+}
+
+export const tableStyle: CSS.Properties= {
+    width: "60%",
+    marginLeft: "20%",
 }
 
 

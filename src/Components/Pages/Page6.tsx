@@ -17,25 +17,35 @@ export class Page6 extends BasePage {
             <h1> Wie häufig möchten Sie spenden? </h1>
           </div>
           <div>
-            <button
-              style={styles.buttonStyle}
-              onClick={() => this.setCurrentPage(3)}
-            >
-              Einmalig
-            </button>
-            <button
-              style={styles.buttonStyle}
-              onClick={() => this.setCurrentPage(9)}
-              title="Sie veranstalten regelmäßig Sammelaktionen für Kunden und/ oder Mitarbeiter"
-            >
-              Sammelaktion
-            </button>
-            <button
-              style={styles.buttonStyle}
-              onClick={() => this.setCurrentPage(8)}
-            >
-              Regelmäßig
-            </button>
+            <table style={styles.tableStyle}>
+              <tr>
+                <td>
+                <button
+                  style={styles.buttonStyle}
+                  onClick={() => this.setCurrentPage(3)}
+                  >
+                  Einmalig
+                </button>
+                </td>
+                <td>
+                  <button
+                    style={styles.buttonStyle}
+                    onClick={() => this.setCurrentPage(9)}
+                      title="Sie veranstalten regelmäßig Sammelaktionen für Kunden und/ oder Mitarbeiter"
+                    >
+                    Sammelaktion
+                  </button>
+                </td>
+                <td>
+                  <button
+                    style={styles.buttonStyle}
+                    onClick={() => this.setCurrentPage(8)}
+                    >
+                    Regelmäßig
+                  </button>
+                </td>
+              </tr>
+            </table>                                    
           </div>
           <div>
           <button style={styles.backButtonStyle} onClick={() => this.goBack()}>

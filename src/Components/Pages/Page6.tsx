@@ -38,7 +38,7 @@ export class Page6 extends BasePage {
             </button>
           </div>
           <div>
-          <button style={styles.buttonStyle} onClick={() => this.goBack()}>
+          <button style={styles.backButtonStyle} onClick={() => this.goBack()}>
               Zurück
             </button>
           </div>

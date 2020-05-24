@@ -35,9 +35,11 @@ export class Page2 extends BasePage {
             >
               Vereinsvertreter
             </button>
-            <button style={styles.buttonStyle} onClick={() => this.goBack()}>
+            <div>
+            <button style={styles.backButtonStyle} onClick={() => this.goBack()}>
               Zurück
             </button>
+            </div>
           </div>
         </div>
       </Layout>

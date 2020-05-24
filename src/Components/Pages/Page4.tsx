@@ -50,7 +50,7 @@ export class Page4 extends BasePage {
           />
           ​
         </form>
-        <button style={styles.buttonStyle} onClick={() => this.goBack()}>
+        <button style={styles.backButtonStyle} onClick={() => this.goBack()}>
           Zurück
         </button>
       </Layout>

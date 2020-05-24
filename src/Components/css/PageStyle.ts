@@ -18,6 +18,17 @@ export const buttonStyle : CSS.Properties= {
         fontWeight: "bold",
         color: "white",
 };
+export const backButtonStyle: CSS.Properties= {
+    backgroundColor: "#CDCDCD",
+    textAlign: "center",
+    borderRadius: "15px",
+    fontSize: "16px",
+    width: "150px",
+    height: "50px",
+    fontFamily: "OpenSansBold",
+    color: "white",
+}
+
 export const payPalButtonStyle : CSS.Properties= {
         width: "200px",
         height: "100px",
@@ -41,5 +52,13 @@ export const gridContainer: CSS.Properties={
     gap: "70px 0px",
     gridTemplateAreas: "'.' '.' '.' '.'"
 };
+
+export const sliderStyle: CSS.Properties= {
+    width: "70%",
+    height: "8.4px",
+    background: "#E1112C",        
+}
+
+
 
 

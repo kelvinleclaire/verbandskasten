@@ -20,7 +20,7 @@ export class Page5 extends BasePage {
             Kosten von etwa 1€ pro
             Verbandskasten. Unterstützen Sie uns gerne mit einer Spende dabei, diese Kosten zu decken und unser Projekt auch in Zukunft
             erfolgreich durchführen zu können.</h2>
-          <button style={styles.buttonStyle} onClick ={()=>this.goBack()}>Zurück</button>
+          <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>
         </Layout>);
 
 /* Paypal link und so muss hier hin.*/

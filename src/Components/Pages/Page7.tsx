@@ -13,11 +13,18 @@ export class Page7 extends BasePage {
     render(): React.ReactElement {
         return(
           <Layout className="regularPage">
-            <h1 style={styles.textStyleH1}>  Hello, {this.props.name} </h1>
-            <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(3)}>Einmalig</button>
-            <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(10)}>Sammelaktion für Mitglieder und/ oder Mitarbeiter</button>
-            <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(8)}>Regelmäßig</button>
-            <button style={styles.buttonStyle} onClick ={()=>this.goBack()}>Zurück</button>
+            <div style={styles.gridContainer}>
+              <div></div>
+              <div>
+                <h1 style={styles.textStyleH1}>  Wie häufig möchten Sie spenden? </h1>
+                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(3)}>Einmalig</button>
+                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(10)}>Sammelaktion für Mitglieder und/ oder Mitarbeiter</button>
+                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(8)}>Regelmäßig</button>
+                </div>
+                <div>
+                <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>
+              </div>
+            </div>
           </Layout>
          );
 

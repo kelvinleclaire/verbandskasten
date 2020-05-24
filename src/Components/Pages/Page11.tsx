@@ -21,7 +21,7 @@ export class Page11 extends BasePage {
               Bleiben Sie darüber hinaus über unsere Social Media Kanäle auf dem Laufenden!​​
             </h1>
           <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(1)}>home</button>
-          <button style={styles.buttonStyle} onClick ={()=>this.goBack()}>Zurück</button>
+          <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>
         </Layout>
 
         );

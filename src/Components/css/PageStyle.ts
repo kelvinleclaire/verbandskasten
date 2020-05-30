@@ -34,8 +34,8 @@ export const fromularButtonStyle: CSS.Properties= {
     textAlign: "center",
     fontSize: "30px",
     borderRadius: "25px",
-    width: "600px",
-    height: "400px",
+    width: "500px",
+    height: "300px",
     fontFamily: "OpenSansBold",
     fontWeight: "bold",
     color: "white",
@@ -68,7 +68,8 @@ export const gridContainer: CSS.Properties={
 export const sliderStyle: CSS.Properties= {
     width: "70%",
     height: "8.4px",
-    background: "#E1112C",        
+    background: "#E1112C",  
+
 }
 
 export const tableStyle: CSS.Properties= {
@@ -76,6 +77,10 @@ export const tableStyle: CSS.Properties= {
     marginLeft: "20%",
 }
 
+export const imgStyle: CSS.Properties= {
+    width: "100px",
+    height: "100px",
+}
 
 
 

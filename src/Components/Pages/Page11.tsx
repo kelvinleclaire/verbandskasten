@@ -3,6 +3,7 @@ import PageProps from "../PageProps";
 import {BasePage} from "../BasePage";
 import {Layout} from "../Layout";
 import * as styles from "../css/PageStyle";
+import { url } from "inspector";
 
 
 
@@ -30,7 +31,26 @@ export class Page11 extends BasePage {
          { /*<div>
           <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>
           </div>*/}
-          Facebook Insta Twitter Icons
+          <table style={styles.tableStyle}>
+            <tr>
+              <td>
+                <a href="https://www.facebook.com/pages/category/Nonprofit-Organization/Verbandskasten-20-231756440729988/" target="_blank">
+                <img src="./Assets/facebook.png" alt="facebook" style={styles.imgStyle}></img>
+                </a>
+              </td>
+              <td>
+                <a href="https://www.instagram.com/verbandskasten2.0/?hl=de" target="_blank">
+                <img src="./Assets/instagram.jpg" alt="instagram" style={styles.imgStyle}></img>
+                </a>
+              </td>
+              <td>
+                <a href="https://twitter.com/vk_2_0" target="_blank">
+                <img src="./assets/twitter.jpg" alt="twitter" style={styles.imgStyle}></img>
+                </a>
+              </td>
+            </tr>
+          </table>
+          
           </div>
         </Layout>
 

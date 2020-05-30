@@ -14,7 +14,6 @@ export class Page8 extends BasePage {
         return(
           <Layout className="regularPage">
             <div style={styles.gridContainer}>
-              
                 <div>
                 <h1 style={styles.textStyleH1}>Gerne finden wir eine individuelle Lösung für unsere regelmäßige Zusammenarbeit.
                 Setzen Sie sich dafür über das unten stehende Formular mit uns in Verbindung.</h1>

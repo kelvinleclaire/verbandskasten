@@ -17,24 +17,37 @@ export class Page2 extends BasePage {
             <h1 style={styles.textStyleH1}> Sie sind: </h1>
           </div>
           <div>
-            <button
-              style={styles.buttonStyle}
-              onClick={() => this.setCurrentPage(3)}
-            >
-              Privatperson
-            </button>
-            <button
-              style={styles.buttonStyle}
-              onClick={() => this.setCurrentPage(6)}
-            >
-              Unternehmensvertreter
-            </button>
-            <button
-              style={styles.buttonStyle}
-              onClick={() => this.setCurrentPage(7)}
-            >
-              Vereinsvertreter
-            </button>
+            <table style={styles.tableStyle}>
+              <tr>
+                <td>
+                <button
+                  style={styles.buttonStyle}
+                  onClick={() => this.setCurrentPage(3)}
+                >
+                  Privatperson
+                 </button>
+                </td>
+                <td>
+                  <button
+                    style={styles.buttonStyle}
+                    onClick={() => this.setCurrentPage(6)}
+                  >
+                    Unternehmensvertreter
+                  </button>
+                </td>
+                <td>
+                  <button
+                    style={styles.buttonStyle}
+                    onClick={() => this.setCurrentPage(7)}
+                  >
+                    Vereinsvertreter
+                 </button>
+                </td>
+              </tr>
+            </table>
+            
+            
+            
             </div>
             <div>
             <button style={styles.backButtonStyle} onClick={() => this.goBack()}>

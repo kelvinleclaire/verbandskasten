@@ -1,2 +1,7 @@
 https://hawhamburgde-my.sharepoint.com/:p:/g/personal/ben_koltzau_haw-hamburg_de/EVWEPX_EW3xFtEk8gMIHyTcBLUpGoSHP5YqsosJ3FoURiA?rtime=o6EhKU_610g
 Grid: https://grid.layoutit.com/
+SMTP Server
+PW: prm$wR8cdjy5NzMU
+user: smtp_website@verbandskasten-spenden.de 
+server-host: mail.manitu.de
+port: 465

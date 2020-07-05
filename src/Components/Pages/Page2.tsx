@@ -45,16 +45,12 @@ export class Page2 extends BasePage {
                 </td>
               </tr>
             </table>
-            
-            
-            
             </div>
             <div>
             <button style={styles.backButtonStyle} onClick={() => this.goBack()}>
               Zurück
             </button>
             </div>
-          
         </div>
       </Layout>
     );

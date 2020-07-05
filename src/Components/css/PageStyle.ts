@@ -65,22 +65,77 @@ export const gridContainer: CSS.Properties={
     gridTemplateAreas: "'.' '.' '.' '.'"
 };
 
+export const formHeaderStyle: CSS.Properties= {
+    padding:"100px"
+};
+
+export const formBorderStyle: CSS.Properties= {
+    border:"1px solid rgba(167,167,167,.4)"
+}
+
 export const sliderStyle: CSS.Properties= {
     width: "70%",
     height: "8.4px",
     background: "#E1112C",  
 
-}
+};
 
 export const tableStyle: CSS.Properties= {
     width: "60%",
     marginLeft: "20%",
-}
+};
 
 export const imgStyle: CSS.Properties= {
     width: "100px",
     height: "100px",
-}
+};
+
+export const textAriaStyle: CSS.Properties= {
+    height: "160px",
+    lineHeight: "2",
+    overflow: "auto",
+    width: "100%",
+    color: "#444",
+    padding: "12px",
+    fontSize: "1em",
+    borderRadius: "2px",
+    fontFamily: "inherit",
+    boxSizing:"border-box",
+    border:"1px solid rgba(167,167,167,.4)"
+};
+
+export const inputStyle: CSS.Properties= {
+    width: "100%",
+    color: "#444",
+    padding: "12px",
+    fontSize: "1em",
+    borderRadius: "2px",
+    fontFamily: "inherit",
+    boxSizing:"border-box",
+    border:"1px solid rgba(167,167,167,.4)"
+
+};
+
+export const checkboxStyle: CSS.Properties= {
+    width:"auto !important",
+    display:"inline-block !important",
+    margin:"0 10px 0 0 !important",
+    padding:"5px !important",
+    verticalAlign:"middle !important",
+    WebkitAppearance:"checkbox"
+};
+
+export const submitButtonStyle : CSS.Properties= {
+    backgroundColor: "#E1112C",
+    textAlign: "center",
+    fontSize: "15px",
+    borderRadius: "25px",
+    width: "200px",
+    height: "75px",
+    fontFamily: "OpenSansBold",
+    fontWeight: "bold",
+    color: "white",
+};
 
 
 

@@ -1,5 +1,6 @@
 import React from "react";
 import * as styles from "./css/PageStyle";
+import emailjs from "emailjs-com";
 
 
 type FormProps= {};
@@ -47,9 +48,19 @@ export class UserForm extends React.Component<FormProps, IFormState> {
 
     // tslint:disable-next-line: typedef
     async submitForm(e: React.FormEvent<HTMLFormElement>) {
-        alert(this.state.name);
+        emailjs.send("smtp_server","template_Ssv53Zoa",
+        {from_name:this.state.name,message_html:this.state.message,from_subject:this.state.subject,from_email:this.state.email},
+        "user_PL1JrExHf0RZgeS7TcP23")
+        .then(function(response:any):void {
+            console.log("SUCCESS!", response.status, response.text);
+            alert(response.text);
+         }, function(error:any):void {
+            console.log("FAILED...", error);
+            alert(error);
+         });
         e.preventDefault();
     }
+
 
     handleChange = async (event: React.FormEvent<HTMLInputElement>|React.FormEvent<HTMLTextAreaElement>) => {
         const target:HTMLInputElement = event.target as HTMLInputElement;

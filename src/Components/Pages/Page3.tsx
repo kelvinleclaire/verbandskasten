@@ -3,6 +3,7 @@ import PageProps from "../PageProps";
 import {BasePage} from "../BasePage";
 import {Layout} from "../Layout";
 import * as styles from "../css/PageStyle";
+import PersonType from "../PersonType";
 
 
 
@@ -26,13 +27,13 @@ export class Page3 extends BasePage {
             <table style={styles.tableStyle}>
               <tr>
                 <td>
-                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(4)}>1-5 Stück</button>
+                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(4, PersonType.Unknown)}>1-5 Stück</button>
                 </td>
                 <td>
-                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(5)}>6-20 Stück</button>
+                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(5, PersonType.Unknown)}>6-20 Stück</button>
                 </td>
                 <td>
-                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(12)}>21-50 oder mehr</button>
+                <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(12, PersonType.Unknown)}>21-50 oder mehr</button>
                 </td>
               </tr>
             </table>

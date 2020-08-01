@@ -1,15 +1,21 @@
 import React from "react";
 import * as styles from "./css/PageStyle";
 import emailjs from "emailjs-com";
+import PersonType from "./PersonType";
 
 
-type FormProps= {};
+type FormProps= {
+    onSubmit:()=>void;
+    personType: PersonType;
+};
 
 interface IEmailState {
     emailState: string;
+
 }
 
 interface IFormState {
+    inProgress: boolean;
     email: string;
     name: string;
     subject: string;
@@ -23,6 +29,7 @@ export class UserForm extends React.Component<FormProps, IFormState> {
     constructor(props:FormProps) {
         super(props);
         this.state = {
+            inProgress: false,
             email: "",
             name: "",
             subject: "",
@@ -48,12 +55,14 @@ export class UserForm extends React.Component<FormProps, IFormState> {
 
     // tslint:disable-next-line: typedef
     async submitForm(e: React.FormEvent<HTMLFormElement>) {
+        this.setState({inProgress:true});
         emailjs.send("smtp_server","template_Ssv53Zoa",
-        {from_name:this.state.name,message_html:this.state.message,from_subject:this.state.subject,from_email:this.state.email},
+        {from_name:this.state.name,message_html:this.state.message,from_subject:this.state.subject,from_email:this.state.email, from_persontype: this.props.personType},
         "user_PL1JrExHf0RZgeS7TcP23")
-        .then(function(response:any):void {
+        .then((response:any):void => {
             console.log("SUCCESS!", response.status, response.text);
-            alert(response.text);
+            this.setState({inProgress: false});
+            this.props.onSubmit();
          }, function(error:any):void {
             console.log("FAILED...", error);
             alert(error);
@@ -73,6 +82,14 @@ export class UserForm extends React.Component<FormProps, IFormState> {
     }
 
     render(): React.ReactElement {
+        if (this.state.inProgress) {
+            return <div>
+                <span>
+                    Sende...
+                </span>
+            </div>;
+        }
+
             return (
                 <form onSubmit={e => this.submitForm(e)}>
                 <table style={styles.tableStyle}>
@@ -142,7 +159,11 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                     </tr>
                     <tr>
                         <td align="left">
-                            <button style={styles.submitButtonStyle} type="submit" id="submit">Nachricht senden</button>
+                            <button
+                                style={styles.submitButtonStyle}
+                                type="submit"
+                                id="submit"
+                                /*onClick={() => this.setCurrentPage(11)}*/>Nachricht senden</button>
                         </td>
                     </tr>
                 </table>

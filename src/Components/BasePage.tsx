@@ -2,6 +2,7 @@ import React from "react";
 import PageProps from "./PageProps";
 import { BackButton } from "./backButton";
 import * as styles from "./css/PageStyle";
+import PersonType from "./PersonType";
 
 
 export class BasePage extends React.Component<PageProps> {
@@ -14,8 +15,8 @@ export class BasePage extends React.Component<PageProps> {
         return(<></>);
 
 }
-public setCurrentPage(pageNumber:number): void {
-   this.props.setCurrentPage(pageNumber);
+public setCurrentPage(pageNumber:number, personType: PersonType): void {
+   this.props.setCurrentPage(pageNumber, personType);
   }
 
 public goBack(): void {

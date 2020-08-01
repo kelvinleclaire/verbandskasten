@@ -4,6 +4,7 @@ import {BasePage} from "../BasePage";
 import {Layout} from "../Layout";
 import * as styles from "../css/PageStyle";
 import {UserForm} from "../UserForm";
+import PersonType from "../PersonType";
 
 
 
@@ -21,7 +22,7 @@ export class Page8 extends BasePage {
                 </h1>
                 </div>
                 <div>
-                <UserForm></UserForm>
+                <UserForm onSubmit = {() => this.setCurrentPage(11, PersonType.Unknown)} personType= {this.props.personType}></UserForm>
                 </div>
                 <div>
                 <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>
@@ -31,5 +32,6 @@ export class Page8 extends BasePage {
         );
 
 }
+
 
 }

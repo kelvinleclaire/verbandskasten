@@ -3,6 +3,8 @@ import PageProps from "../PageProps";
 import {BasePage} from "../BasePage";
 import {Layout} from "../Layout";
 import * as styles from "../css/PageStyle";
+import { UserForm } from "../UserForm";
+import PersonType from "../PersonType";
 
 
 
@@ -13,21 +15,18 @@ export class Page12 extends BasePage {
     render(): React.ReactElement {
         return(
           <Layout className="regularPage">
-            <div style={styles.gridContainer}>
             <div>
-              <h1 style={styles.textStyleH1}>
-              Gerne finden wir eine individuelle Lösung für den ​
-              Transport Ihrer Spende. Setzen Sie sich dazu bitte über ​
-              das unten stehende Formular mit uns in Verbindung.​
-        ​​      </h1>
-              <div>
-              <button style={styles.fromularButtonStyle} onClick ={()=>this.setCurrentPage(11)}>Kontaktformular Abfrage Name, Mail, Text, DSGVO Häckchen</button>
+                <div style={styles.formHeaderStyle}>
+                <h1 style={styles.textStyleH1}>Gerne finden wir eine individuelle Lösung für unsere regelmäßige Zusammenarbeit.
+                Setzen Sie sich dafür über das unten stehende Formular mit uns in Verbindung.
+                </h1>
+                </div>
+                <div>
+                <UserForm onSubmit = {() => this.setCurrentPage(11, PersonType.Unknown)}personType= {this.props.personType}></UserForm>
+                </div>
+                <div>
+                <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>
               </div>
-              </div>
-              <div>
-              <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>
-              </div>
-            
             </div>
           </Layout>
         );

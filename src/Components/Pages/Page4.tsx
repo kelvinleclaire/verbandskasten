@@ -3,6 +3,7 @@ import PageProps from "../PageProps";
 import { BasePage } from "../BasePage";
 import { Layout } from "../Layout";
 import * as styles from "../css/PageStyle";
+import PersonType from "../PersonType";
 
 export class Page4 extends BasePage {
   constructor(props: PageProps) {
@@ -15,7 +16,7 @@ export class Page4 extends BasePage {
           {" "}
           Bitte senden Sie Ihre Sachspende an folgende Adresse:{" "}
         </h1>
-        <button style={styles.fromularButtonStyle} onClick={() => this.setCurrentPage(3)}>Ben Kolzau <br></br> Verbandskasten 2.0 e.V. <br></br>Stellbrinkweg 26 <br></br> 21035 Hamburg </button>
+        <button style={styles.fromularButtonStyle} onClick={() => this.setCurrentPage(3, PersonType.Unknown)}>Ben Kolzau <br></br> Verbandskasten 2.0 e.V. <br></br>Stellbrinkweg 26 <br></br> 21035 Hamburg </button>
         <h2 style={styles.textStyleH1}>
           Vielen Dank für die Spende Ihrer Verbandsmaterialien!
         </h2>
@@ -35,7 +36,7 @@ export class Page4 extends BasePage {
           <input type="hidden" name="hosted_button_id" value="TA4EN3GUKR57L" />​
           <input
             type="image"
-            src="https://images.mixer.com/sSvLsxl4yUHYYcmNHm4gfkq_7CSFZITnPE1vvwl77F2I/https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png"
+            src="https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png"
             name="submit"
             title="PayPal - The safer, easier way to pay online!"
             alt="Spenden mit dem PayPal-Button"

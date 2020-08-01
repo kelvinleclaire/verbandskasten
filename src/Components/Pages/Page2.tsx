@@ -3,6 +3,7 @@ import PageProps from "../PageProps";
 import { BasePage } from "../BasePage";
 import { Layout } from "../Layout";
 import * as styles from "../css/PageStyle";
+import PersonType from "../PersonType";
 
 export class Page2 extends BasePage {
   constructor(props: PageProps) {
@@ -22,7 +23,7 @@ export class Page2 extends BasePage {
                 <td>
                 <button
                   style={styles.buttonStyle}
-                  onClick={() => this.setCurrentPage(3)}
+                  onClick={() => this.setCurrentPage(3, PersonType.PrivatePerson)}
                 >
                   Privatperson
                  </button>
@@ -30,7 +31,7 @@ export class Page2 extends BasePage {
                 <td>
                   <button
                     style={styles.buttonStyle}
-                    onClick={() => this.setCurrentPage(6)}
+                    onClick={() => this.setCurrentPage(6, PersonType.Company)}
                   >
                     Unternehmensvertreter
                   </button>
@@ -38,7 +39,7 @@ export class Page2 extends BasePage {
                 <td>
                   <button
                     style={styles.buttonStyle}
-                    onClick={() => this.setCurrentPage(7)}
+                    onClick={() => this.setCurrentPage(7, PersonType.Club)}
                   >
                     Vereinsvertreter
                  </button>

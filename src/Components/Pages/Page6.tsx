@@ -3,6 +3,7 @@ import PageProps from "../PageProps";
 import { BasePage } from "../BasePage";
 import { Layout } from "../Layout";
 import * as styles from "../css/PageStyle";
+import PersonType from "../PersonType";
 
 export class Page6 extends BasePage {
   constructor(props: PageProps) {
@@ -22,7 +23,7 @@ export class Page6 extends BasePage {
                 <td>
                 <button
                   style={styles.buttonStyle}
-                  onClick={() => this.setCurrentPage(3)}
+                  onClick={() => this.setCurrentPage(3, PersonType.Unknown)}
                   >
                   Einmalig
                 </button>
@@ -30,7 +31,7 @@ export class Page6 extends BasePage {
                 <td>
                   <button
                     style={styles.buttonStyle}
-                    onClick={() => this.setCurrentPage(9)}
+                    onClick={() => this.setCurrentPage(9, PersonType.Unknown)}
                       title="Sie veranstalten regelmäßig Sammelaktionen für Kunden und/ oder Mitarbeiter"
                     >
                     Sammelaktion
@@ -39,7 +40,7 @@ export class Page6 extends BasePage {
                 <td>
                   <button
                     style={styles.buttonStyle}
-                    onClick={() => this.setCurrentPage(8)}
+                    onClick={() => this.setCurrentPage(8, PersonType.Unknown)}
                     >
                     Regelmäßig
                   </button>

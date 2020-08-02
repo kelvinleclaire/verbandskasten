@@ -22,7 +22,7 @@ Setzen Sie sich dazu bitte über das unten stehende Formular mit uns in Verbindu
                 </h1>
                 </div>
                 <div>
-                <UserForm onSubmit = {() => this.setCurrentPage(11, PersonType.Unknown)}personType= {this.props.personType}></UserForm>
+                <UserForm onSubmit = {() => this.setCurrentPage(11, PersonType.Unknown,"")}personType= {this.props.personType} frequency={this.props.frequency}></UserForm>
                 </div>
                 <div>
                 <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>

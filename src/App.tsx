@@ -19,6 +19,7 @@ type MainProps = {};
 type MainState = {
   currentPage: number;
   currentPersonType: PersonType;
+  currentFrequency: String;
   previousPage: number;
   pageHistory: Array<number>;
 };
@@ -26,7 +27,7 @@ type MainState = {
 export default class Main extends React.Component<MainProps, MainState> {
   constructor(props: MainProps) {
     super(props);
-    this.state = { currentPersonType: PersonType.Unknown, currentPage: 10, previousPage: 0 ,pageHistory:new Array<number>()};
+    this.state = { currentPersonType: PersonType.Unknown, currentFrequency:"", currentPage: 2, previousPage: 0 ,pageHistory:new Array<number>()};
   }
   render(): React.ReactElement {
     return (
@@ -38,6 +39,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page1
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page1>
@@ -47,6 +49,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page2
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page2>
@@ -56,6 +59,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page3
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page3>
@@ -65,6 +69,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page4
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page4>
@@ -74,6 +79,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page5
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page5>
@@ -83,6 +89,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page6
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page6>
@@ -92,6 +99,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page7
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page7>
@@ -101,6 +109,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page8
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page8>
@@ -110,6 +119,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page9
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page9>
@@ -119,6 +129,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page10
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page10>
@@ -128,6 +139,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page11
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page11>
@@ -137,6 +149,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <Page12
                   name={"Wir sind auf Page " + this.state.currentPage}
                   personType={this.state.currentPersonType}
+                  frequency={this.state.currentFrequency}
                   setCurrentPage={this.setCurrentPage.bind(this)}
                   goBack={this.goBack.bind(this)}
                 ></Page12>
@@ -150,15 +163,20 @@ export default class Main extends React.Component<MainProps, MainState> {
     );
   }
 
-  private setCurrentPage(openPage: number, personType: PersonType): void {
+  private setCurrentPage(openPage: number, personType: PersonType, frequency: String): void {
     let history :Array<number> = this.state.pageHistory;
+    let localFrequency: String ="";
+    if(frequency !== "")
+    {
+      localFrequency=frequency;
+    }
+    let localPersontype: PersonType=PersonType.Unknown;
+    if(personType !== PersonType.Unknown)
+    {
+      localPersontype=personType;
+    }
     history.push(this.state.currentPage);
-    if (personType !== PersonType.Unknown){
-    this.setState({ currentPage: openPage, currentPersonType: personType, pageHistory:history });
-  }
-  else{
-    this.setState({ currentPage: openPage, pageHistory:history });
-  }
+    this.setState({ currentPage: openPage, currentPersonType: localPersontype, pageHistory:history, currentFrequency: localFrequency });
   }
   private goBack(): void {
     let history :Array<number> = this.state.pageHistory;

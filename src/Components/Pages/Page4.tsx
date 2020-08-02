@@ -16,7 +16,7 @@ export class Page4 extends BasePage {
           {" "}
           Bitte senden Sie Ihre Sachspende an folgende Adresse:{" "}
         </h1>
-        <button style={styles.fromularButtonStyle} onClick={() => this.setCurrentPage(3, PersonType.Unknown)}>Ben Kolzau <br></br> Verbandskasten 2.0 e.V. <br></br>Stellbrinkweg 26 <br></br> 21035 Hamburg </button>
+        <button style={styles.fromularButtonStyle} onClick={() => this.setCurrentPage(3, PersonType.Unknown,"")}>Ben Kolzau <br></br> Verbandskasten 2.0 e.V. <br></br>Stellbrinkweg 26 <br></br> 21035 Hamburg </button>
         <h2 style={styles.textStyleH1}>
           Vielen Dank für die Spende Ihrer Verbandsmaterialien!
         </h2>

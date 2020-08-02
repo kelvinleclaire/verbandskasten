@@ -7,6 +7,7 @@ import PersonType from "./PersonType";
 type FormProps= {
     onSubmit:()=>void;
     personType: PersonType;
+    frequency: String;
 };
 
 interface IEmailState {
@@ -55,9 +56,26 @@ export class UserForm extends React.Component<FormProps, IFormState> {
 
     // tslint:disable-next-line: typedef
     async submitForm(e: React.FormEvent<HTMLFormElement>) {
+        var person:String = "";
+        switch(this.props.personType)
+        {
+            case PersonType.Unknown:
+                person = "Unknown";
+                break;
+            case PersonType.PrivatePerson:
+                person = "Privatperson";
+                break;
+            case PersonType.Company:
+                person = "Unternehmensvertreter";
+                break;
+            case PersonType.Club:
+                person = "Vereinsvertreter";
+                break;
+        }
+
         this.setState({inProgress:true});
         emailjs.send("smtp_server","template_Ssv53Zoa",
-        {from_name:this.state.name,message_html:this.state.message,from_subject:this.state.subject,from_email:this.state.email, from_persontype: this.props.personType},
+        {from_name:this.state.name,message_html:this.state.message,from_subject:this.state.subject,from_email:this.state.email, from_persontype: person, from_frequency:this.props.frequency},
         "user_PL1JrExHf0RZgeS7TcP23")
         .then((response:any):void => {
             console.log("SUCCESS!", response.status, response.text);
@@ -84,9 +102,10 @@ export class UserForm extends React.Component<FormProps, IFormState> {
     render(): React.ReactElement {
         if (this.state.inProgress) {
             return <div>
-                <span>
+                <span style={styles.sendStlye}>
                     Sende...
                 </span>
+                <div></div>
             </div>;
         }
 
@@ -100,6 +119,7 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                                 type="string"
                                 id="name"
                                 name="name"
+                                required
                                 placeholder="Name (*)"
                                 aria-aria-required="true"
                                 onChange={e => {
@@ -115,6 +135,7 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                                 type="email"
                                 id="email"
                                 name="email"
+                                required
                                 placeholder="E-Mail (*)"
                                 onChange={e => {
                                     this.validateEmail(e);
@@ -129,6 +150,7 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                                 type="string"
                                 id="subject"
                                 name="subject"
+                                required
                                 placeholder="Betreff (*)"
                                 onChange={e => {
                                     this.handleChange(e);
@@ -142,6 +164,7 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                                 style={styles.textAriaStyle}
                                 id="message"
                                 name="message"
+                                required
                                 rows={10}
                                 cols={80}
                                 placeholder="Ihre Nachricht"
@@ -153,7 +176,13 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                     </tr>
                     <tr>
                         <td align="left">
-                            <input style={styles.checkboxStyle} type="checkbox" id="checkbox" value="Ich stimme der Speicherung der Daten zur Verarbeitung im Sinne der DSGVO zu."></input>
+                            <input 
+                                style={styles.checkboxStyle} 
+                                type="checkbox" 
+                                id="checkbox" 
+                                value="Ich stimme der Speicherung der Daten zur Verarbeitung im Sinne der DSGVO zu."
+                                required
+                                ></input>
                             <span>Ich stimme der Speicherung der Daten zur Verarbeitung im Sinne der DSGVO zu.</span>
                         </td>
                     </tr>

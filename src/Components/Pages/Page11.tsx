@@ -27,7 +27,7 @@ export class Page11 extends BasePage {
             </h1>
             </div>
             <div>
-          <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(1, PersonType.Unknown)}>home</button>
+          <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(1, PersonType.Unknown,"")}>home</button>
           </div>
          { /*<div>
           <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>

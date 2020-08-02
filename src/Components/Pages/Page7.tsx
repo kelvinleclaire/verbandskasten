@@ -23,13 +23,13 @@ export class Page7 extends BasePage {
                 <table style={styles.tableStyle}>
                   <tr>
                     <td>
-                    <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(3, PersonType.Unknown)}>Einmalig</button>
+                    <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(3, PersonType.Unknown, "Einmalig")}>Einmalig</button>
                     </td>
                     <td>
-                      <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(10, PersonType.Unknown)}>Sammelaktion für Mitglieder und/ oder Mitarbeiter</button>
+                      <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(10, PersonType.Unknown, "Sammelaktion für Mitglieder und/ oder Mitarbeiter")}>Sammelaktion für Mitglieder und/ oder Mitarbeiter</button>
                     </td>
                     <td>
-                      <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(8, PersonType.Unknown)}>Regelmäßig</button>
+                      <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(8, PersonType.Unknown, "Regelmäßig")}>Regelmäßig</button>
                     </td>                                                          
                   </tr>
                 </table>

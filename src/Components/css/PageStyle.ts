@@ -17,6 +17,7 @@ export const buttonStyle : CSS.Properties= {
         fontFamily: "OpenSansBold",
         fontWeight: "bold",
         color: "white",
+        marginBottom:"30px"
 };
 export const backButtonStyle: CSS.Properties= {
     backgroundColor: "#CDCDCD",
@@ -27,7 +28,7 @@ export const backButtonStyle: CSS.Properties= {
     height: "50px",
     fontFamily: "OpenSansBold",
     color: "white",
-}
+};
 
 export const fromularButtonStyle: CSS.Properties= {
     backgroundColor: "#E1112C",
@@ -39,7 +40,7 @@ export const fromularButtonStyle: CSS.Properties= {
     fontFamily: "OpenSansBold",
     fontWeight: "bold",
     color: "white",
-}
+};
 
 export const payPalButtonStyle : CSS.Properties= {
         width: "200px",
@@ -50,7 +51,7 @@ export const textStyleH1 : CSS.Properties= {
     fontFamily: "OpenSansExtraBold",
     fontWeight: "bold",
     fontSize: "28px",
-}
+};
 
 export const textStyleH2 : CSS.Properties= {
     fontFamily: "OpenSansBold",
@@ -60,18 +61,21 @@ export const textStyleH2 : CSS.Properties= {
 export const gridContainer: CSS.Properties={
     display:"grid",
     gridTemplateColumns: "1fr",
-    gridTemplateRows: "1fr 1fr 1fr 1fr",
-    gap: "70px 0px",
-    gridTemplateAreas: "'.' '.' '.' '.'"
+    gridTemplateRows: "repeat(auto-fit, minmax(300px, 1fr))",
 };
 
 export const formHeaderStyle: CSS.Properties= {
     padding:"100px"
 };
 
+export const rowStyle: CSS.Properties= {
+    paddingTop:"20%",
+};
+
+
 export const formBorderStyle: CSS.Properties= {
     border:"1px solid rgba(167,167,167,.4)"
-}
+};
 
 export const sliderStyle: CSS.Properties= {
     width: "70%",
@@ -81,8 +85,8 @@ export const sliderStyle: CSS.Properties= {
 };
 
 export const tableStyle: CSS.Properties= {
-    width: "60%",
-    marginLeft: "20%",
+    marginLeft: "auto",
+    marginRight:"auto"
 };
 
 export const imgStyle: CSS.Properties= {
@@ -137,5 +141,15 @@ export const submitButtonStyle : CSS.Properties= {
     color: "white",
 };
 
+export const sendStlye : CSS.Properties= {
+    fontFamily: "OpenSansExtraBold",
+    fontWeight: "bold",
+    fontSize: "28px",
+};
+
+export const buttonContainer: CSS.Properties= {
+    display:"grid",
+    gridTemplateColumns:"repeat(auto-fit, minmax(300px, 1fr))"
+};
 
 

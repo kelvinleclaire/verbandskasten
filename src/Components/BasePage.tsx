@@ -15,8 +15,8 @@ export class BasePage extends React.Component<PageProps> {
         return(<></>);
 
 }
-public setCurrentPage(pageNumber:number, personType: PersonType): void {
-   this.props.setCurrentPage(pageNumber, personType);
+public setCurrentPage(pageNumber:number, personType: PersonType, frequency: String): void {
+   this.props.setCurrentPage(pageNumber, personType, frequency);
   }
 
 public goBack(): void {

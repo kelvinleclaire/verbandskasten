@@ -23,7 +23,7 @@ export class Page6 extends BasePage {
                 <td>
                 <button
                   style={styles.buttonStyle}
-                  onClick={() => this.setCurrentPage(3, PersonType.Unknown)}
+                  onClick={() => this.setCurrentPage(3, PersonType.Unknown, "Einmalig")}
                   >
                   Einmalig
                 </button>
@@ -31,7 +31,7 @@ export class Page6 extends BasePage {
                 <td>
                   <button
                     style={styles.buttonStyle}
-                    onClick={() => this.setCurrentPage(9, PersonType.Unknown)}
+                    onClick={() => this.setCurrentPage(9, PersonType.Unknown, "Sammelaktion")}
                       title="Sie veranstalten regelmäßig Sammelaktionen für Kunden und/ oder Mitarbeiter"
                     >
                     Sammelaktion
@@ -40,7 +40,7 @@ export class Page6 extends BasePage {
                 <td>
                   <button
                     style={styles.buttonStyle}
-                    onClick={() => this.setCurrentPage(8, PersonType.Unknown)}
+                    onClick={() => this.setCurrentPage(8, PersonType.Unknown, "Regelmäßig")}
                     >
                     Regelmäßig
                   </button>

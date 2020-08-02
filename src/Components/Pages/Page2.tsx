@@ -13,39 +13,36 @@ export class Page2 extends BasePage {
     return (
       <Layout className="regularPage">
         <div style={styles.gridContainer}>
-          <div></div>
-          <div>
+          <div style={styles.rowStyle}>
             <h1 style={styles.textStyleH1}> Sie sind: </h1>
           </div>
           <div>
-            <table style={styles.tableStyle}>
-              <tr>
-                <td>
-                <button
-                  style={styles.buttonStyle}
-                  onClick={() => this.setCurrentPage(3, PersonType.PrivatePerson)}
-                >
-                  Privatperson
-                 </button>
-                </td>
-                <td>
-                  <button
-                    style={styles.buttonStyle}
-                    onClick={() => this.setCurrentPage(6, PersonType.Company)}
-                  >
-                    Unternehmensvertreter
+            <div style={styles.buttonContainer}>
+                  <div>
+                      <button
+                      style={styles.buttonStyle}
+                      onClick={() => this.setCurrentPage(3, PersonType.PrivatePerson,"")}
+                    >
+                      Privatperson
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      style={styles.buttonStyle}
+                      onClick={() => this.setCurrentPage(6, PersonType.Company,"")}
+                    >
+                      Unternehmensvertreter
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      style={styles.buttonStyle}
+                      onClick={() => this.setCurrentPage(7, PersonType.Club,"")}
+                    >
+                      Vereinsvertreter
                   </button>
-                </td>
-                <td>
-                  <button
-                    style={styles.buttonStyle}
-                    onClick={() => this.setCurrentPage(7, PersonType.Club)}
-                  >
-                    Vereinsvertreter
-                 </button>
-                </td>
-              </tr>
-            </table>
+                  </div>
+            </div>
             </div>
             <div>
             <button style={styles.backButtonStyle} onClick={() => this.goBack()}>

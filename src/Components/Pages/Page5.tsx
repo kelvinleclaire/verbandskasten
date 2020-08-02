@@ -18,7 +18,7 @@ export class Page5 extends BasePage {
           {" "}
           Bitte senden Sie Ihre Sachspende an folgende Adresse:{" "}
         </h1>
-        <button style={styles.fromularButtonStyle} onClick={() => this.setCurrentPage(3, PersonType.Unknown)}>Verbandskasten 2.0 e.V. <br></br>Hans-Stockmar Str. 26 <br></br> 24568 Kaltenkirchen</button>
+        <button style={styles.fromularButtonStyle} onClick={() => this.setCurrentPage(3, PersonType.Unknown,"")}>Verbandskasten 2.0 e.V. <br></br>Hans-Stockmar Str. 26 <br></br> 24568 Kaltenkirchen</button>
         <h2 style={styles.textStyleH1}>
           Vielen Dank für die Spende Ihrer Verbandsmaterialien!
         </h2>

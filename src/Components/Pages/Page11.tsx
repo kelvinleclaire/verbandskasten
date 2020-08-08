@@ -16,8 +16,7 @@ export class Page11 extends BasePage {
         return(
           <Layout className="regularPage">
             <div style={styles.gridContainer}>
-              <div></div>
-              <div>
+              <div style={styles.rowStyle}>
              <h1 style={styles.textStyleH1}>
               Vielen Dank für Ihr Interesse und Ihre Anfrage! Wir setzen uns​
               schnellstmöglich mit Ihnen in Verbindung. Bitte haben Sie​

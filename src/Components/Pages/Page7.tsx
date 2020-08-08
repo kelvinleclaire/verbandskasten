@@ -15,25 +15,20 @@ export class Page7 extends BasePage {
         return(
           <Layout className="regularPage">
             <div style={styles.gridContainer}>
-              <div></div>
-              <div>
+              <div style={styles.rowStyle}>
                 <h1 style={styles.textStyleH1}>  Wie häufig möchten Sie spenden? </h1>
+              </div>
+              <div style={styles.buttonContainer}>
+                <div>
+                  <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(3, PersonType.Unknown, "Einmalig")}>Einmalig</button>
                 </div>
-                
-                <table style={styles.tableStyle}>
-                  <tr>
-                    <td>
-                    <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(3, PersonType.Unknown, "Einmalig")}>Einmalig</button>
-                    </td>
-                    <td>
-                      <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(10, PersonType.Unknown, "Sammelaktion für Mitglieder und/ oder Mitarbeiter")}>Sammelaktion für Mitglieder und/ oder Mitarbeiter</button>
-                    </td>
-                    <td>
-                      <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(8, PersonType.Unknown, "Regelmäßig")}>Regelmäßig</button>
-                    </td>                                                          
-                  </tr>
-                </table>
-                
+                <div>
+                  <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(10, PersonType.Unknown, "Sammelaktion für Mitglieder und/ oder Mitarbeiter")}>Sammelaktion für Mitglieder und/ oder Mitarbeiter</button>
+                </div>
+                <div>
+                  <button style={styles.buttonStyle} onClick ={()=>this.setCurrentPage(8, PersonType.Unknown, "Regelmäßig")}>Regelmäßig</button>
+                </div>
+              </div>
                 <div>
                 <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>
               </div>

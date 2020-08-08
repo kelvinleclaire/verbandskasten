@@ -27,7 +27,7 @@ type MainState = {
 export default class Main extends React.Component<MainProps, MainState> {
   constructor(props: MainProps) {
     super(props);
-    this.state = { currentPersonType: PersonType.Unknown, currentFrequency:"", currentPage: 2, previousPage: 0 ,pageHistory:new Array<number>()};
+    this.state = { currentPersonType: PersonType.Unknown, currentFrequency:"", currentPage: 12, previousPage: 0 ,pageHistory:new Array<number>()};
   }
   render(): React.ReactElement {
     return (

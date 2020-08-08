@@ -13,40 +13,21 @@ export class Page6 extends BasePage {
     return (
       <Layout className="regularPage">
         <div style={styles.gridContainer}>
-          <div></div>
-          <div>
+          <div style={styles.rowStyle}>
             <h1> Wie häufig möchten Sie spenden? </h1>
           </div>
-          <div>
-            <table style={styles.tableStyle}>
-              <tr>
-                <td>
-                <button
-                  style={styles.buttonStyle}
-                  onClick={() => this.setCurrentPage(3, PersonType.Unknown, "Einmalig")}
-                  >
-                  Einmalig
-                </button>
-                </td>
-                <td>
-                  <button
-                    style={styles.buttonStyle}
-                    onClick={() => this.setCurrentPage(9, PersonType.Unknown, "Sammelaktion")}
-                      title="Sie veranstalten regelmäßig Sammelaktionen für Kunden und/ oder Mitarbeiter"
-                    >
-                    Sammelaktion
-                  </button>
-                </td>
-                <td>
-                  <button
-                    style={styles.buttonStyle}
-                    onClick={() => this.setCurrentPage(8, PersonType.Unknown, "Regelmäßig")}
-                    >
-                    Regelmäßig
-                  </button>
-                </td>
-              </tr>
-            </table>
+          <div style={styles.buttonContainer}>
+            <div>
+              <button style={styles.buttonStyle} onClick={() => this.setCurrentPage(3, PersonType.Unknown, "Einmalig")}>Einmalig</button>
+            </div>
+            <div>
+            <button style={styles.buttonStyle} onClick={() => this.setCurrentPage(9, PersonType.Unknown, "Sammelaktion")}
+                      title="Sie veranstalten regelmäßig Sammelaktionen für Kunden und/ oder Mitarbeiter">Sammelaktion</button>
+            </div>
+            <div>
+            <button
+                    style={styles.buttonStyle} onClick={() => this.setCurrentPage(8, PersonType.Unknown, "Regelmäßig")}>Regelmäßig</button>
+            </div>
           </div>
           <div>
           <button style={styles.backButtonStyle} onClick={() => this.goBack()}>

@@ -17,7 +17,7 @@ export class Page6 extends BasePage {
             <h1> Wie häufig möchten Sie spenden? </h1>
           </div>
           <div style={styles.buttonContainer}>
-            <div>
+            <div> 
               <button style={styles.buttonStyle} onClick={() => this.setCurrentPage(3, PersonType.Unknown, "Einmalig")}>Einmalig</button>
             </div>
             <div>

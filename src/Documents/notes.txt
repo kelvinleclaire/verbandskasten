@@ -11,3 +11,5 @@ user:thomas@leclaire.de // wordpress@verbandskasten-spenden.de
 pw:86FaLLN8eL5b
 
 https://www.emailjs.com/
+
+https://vercel.com/tleclaire/verbandskasten

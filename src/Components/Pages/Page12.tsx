@@ -22,7 +22,7 @@ export class Page12 extends BasePage {
                 </h1>
                 </div>
                 <div>
-                <UserForm onSubmit = {() => this.setCurrentPage(11, PersonType.Unknown,"")}personType= {this.props.personType} frequency={this.props.frequency}></UserForm>
+                <UserForm onSubmit = {() => window.open('https://verbandskasten-spenden.de/danke',"_self")}personType= {this.props.personType} frequency={this.props.frequency}></UserForm>
                 </div>
                 <div>
                 <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>

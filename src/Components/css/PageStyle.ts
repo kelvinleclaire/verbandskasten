@@ -12,7 +12,7 @@ export const buttonStyle : CSS.Properties= {
         textAlign: "center",
         fontSize: "22px",
         borderRadius: "25px",
-        width: "300px",
+        width: "350px",
         height: "100px",
         fontFamily: "OpenSansBold",
         fontWeight: "bold",

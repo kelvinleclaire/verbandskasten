@@ -31,7 +31,7 @@ export class Page2 extends BasePage {
                       style={styles.buttonStyle}
                       onClick={() => this.setCurrentPage(6, PersonType.Company,"")}
                     >
-                      Unternehmensvertreter
+                      Unternehmensvertreter*in
                     </button>
                   </div>
                   <div>
@@ -39,7 +39,7 @@ export class Page2 extends BasePage {
                       style={styles.buttonStyle}
                       onClick={() => this.setCurrentPage(7, PersonType.Club,"")}
                     >
-                      Vereinsvertreter
+                      Vereinsvertreter*in
                   </button>
                   </div>
             </div>

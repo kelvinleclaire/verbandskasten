@@ -13,6 +13,7 @@ import { Page9 } from "./Components/Pages/Page9";
 import { Page10 } from "./Components/Pages/Page10";
 import { Page11 } from "./Components/Pages/Page11";
 import { Page12 } from "./Components/Pages/Page12";
+import { SmallUserForm } from "./Components/SmallUserForm";
 import PersonType from "./Components/PersonType";
 
 type MainProps = {};
@@ -154,7 +155,6 @@ export default class Main extends React.Component<MainProps, MainState> {
                   goBack={this.goBack.bind(this)}
                 ></Page12>
               );
-
             default:
               break;
           }

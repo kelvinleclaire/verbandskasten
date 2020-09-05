@@ -4,6 +4,7 @@ import {BasePage} from "../BasePage";
 import {Layout} from "../Layout";
 import * as styles from "../css/PageStyle";
 import PersonType from "../PersonType";
+import {SmallUserForm} from "../SmallUserForm";
 
 
 
@@ -14,22 +15,17 @@ export class Page5 extends BasePage {
   render(): React.ReactElement {
     return (
       <Layout className="regularPage">
-        <h1 style={styles.textStyleH1}>
-          {" "}
-          Bitte senden Sie Ihre Sachspende an folgende Adresse:{" "}
-        </h1>
-        <button style={styles.fromularButtonStyle} onClick={() => this.setCurrentPage(3, PersonType.Unknown,"")}>Verbandskasten 2.0 e.V. <br></br>Hans-Stockmar Str. 26 <br></br> 24568 Kaltenkirchen</button>
-        <h2 style={styles.textStyleH1}>
-          Vielen Dank für die Spende Ihrer Verbandsmaterialien!
-        </h2>
-        <h2 style={styles.textStyleH2}>
-          Beim Transport Ihrer Verbandsmaterialien in die Projektländer
-          entstehen uns insgesamt Kosten von etwa 1€ pro Verbandskasten.
-          Unterstützen Sie uns gerne mit einer Spende dabei, diese Kosten zu
-          decken und unser Projekt auch in Zukunft erfolgreich durchführen zu
-          können.
-        </h2>
-        <form
+                   <div>
+                <div style={styles.formHeaderStyle}>
+                <h1 style={styles.textStyleH1}>Vielen Dank! Bitte tragen Sie ihren Namen und ihre E-Mail Adresse ein
+                                              damit wir Ihnen die genauen Details zukommen lassen können.
+                </h1>
+                </div>
+                <div>
+                <SmallUserForm onSubmit = {() => window.open('https://verbandskasten-spenden.de/danke',"_self")} personType= {this.props.personType} frequency={this.props.frequency}></SmallUserForm>
+                </div>
+
+                <form
           action="https://www.paypal.com/cgi-bin/webscr"
           method="post"
           target="_top"
@@ -53,9 +49,11 @@ export class Page5 extends BasePage {
           />
           ​
         </form>
-        <button style={styles.backButtonStyle} onClick={() => this.goBack()}>
-          Zurück
-        </button>
+
+                <div>
+                <button style={styles.backButtonStyle} onClick ={()=>this.goBack()}>Zurück</button>
+              </div>
+            </div> 
       </Layout>
     );
   }

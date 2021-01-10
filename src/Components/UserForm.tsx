@@ -4,8 +4,8 @@ import emailjs from "emailjs-com";
 import PersonType from "./PersonType";
 
 
-type FormProps= {
-    onSubmit:()=>void;
+type FormProps = {
+    onSubmit: () => void;
     personType: PersonType;
     frequency: String;
 };
@@ -27,14 +27,14 @@ interface IFormState {
 
 
 export class UserForm extends React.Component<FormProps, IFormState> {
-    constructor(props:FormProps) {
+    constructor (props: FormProps) {
         super(props);
         this.state = {
             inProgress: false,
             email: "",
             name: "",
             subject: "",
-            message:"",
+            message: "",
             validate: {
                 emailState: "",
             },
@@ -56,9 +56,8 @@ export class UserForm extends React.Component<FormProps, IFormState> {
 
     // tslint:disable-next-line: typedef
     async submitForm(e: React.FormEvent<HTMLFormElement>) {
-        var person:String = "";
-        switch(this.props.personType)
-        {
+        var person: String = "";
+        switch (this.props.personType) {
             case PersonType.Unknown:
                 person = "Unknown";
                 break;
@@ -73,24 +72,24 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                 break;
         }
 
-        this.setState({inProgress:true});
-        emailjs.send("smtp_server","template_Ssv53Zoa",
-        {from_name:this.state.name,message_html:this.state.message,from_subject:this.state.subject,from_email:this.state.email, from_persontype: person, from_frequency:this.props.frequency},
-        "user_PL1JrExHf0RZgeS7TcP23")
-        .then((response:any):void => {
-            console.log("SUCCESS!", response.status, response.text);
-            this.setState({inProgress: false});
-            this.props.onSubmit();
-         }, function(error:any):void {
-            console.log("FAILED...", error);
-            alert(error);
-         });
+        this.setState({ inProgress: true });
+        emailjs.send("smtp_server", "template_Ssv53Zoa",
+            { from_name: this.state.name, message_html: this.state.message, from_subject: this.state.subject, from_email: this.state.email, from_persontype: person, from_frequency: this.props.frequency },
+            "user_PL1JrExHf0RZgeS7TcP23")
+            .then((response: any): void => {
+                console.log("SUCCESS!", response.status, response.text);
+                this.setState({ inProgress: false });
+                this.props.onSubmit();
+            }, function (error: any): void {
+                console.log("FAILED...", error);
+                alert(error);
+            });
         e.preventDefault();
     }
 
 
-    handleChange = async (event: React.FormEvent<HTMLInputElement>|React.FormEvent<HTMLTextAreaElement>) => {
-        const target:HTMLInputElement = event.target as HTMLInputElement;
+    handleChange = async (event: React.FormEvent<HTMLInputElement> | React.FormEvent<HTMLTextAreaElement>) => {
+        const target: HTMLInputElement = event.target as HTMLInputElement;
         // tslint:disable-next-line: typedef
         const value = target.type === "checkbox" ? target.checked : target.value;
         const { name } = target;
@@ -109,8 +108,8 @@ export class UserForm extends React.Component<FormProps, IFormState> {
             </div>;
         }
 
-            return (
-                <form onSubmit={e => this.submitForm(e)}>
+        return (
+            <form onSubmit={e => this.submitForm(e)}>
                 <table style={styles.tableStyle}>
                     <tr>
                         <td>
@@ -125,7 +124,7 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                                 onChange={e => {
                                     this.handleChange(e);
                                 }}
-                                ></input>
+                            ></input>
                         </td>
                     </tr>
                     <tr>
@@ -155,7 +154,7 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                                 onChange={e => {
                                     this.handleChange(e);
                                 }}
-                                ></input>
+                            ></input>
                         </td>
                     </tr>
                     <tr>
@@ -171,18 +170,18 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                                 onChange={e => {
                                     this.handleChange(e);
                                 }}
-                                ></textarea>
+                            ></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td align="left">
-                            <input 
-                                style={styles.checkboxStyle} 
-                                type="checkbox" 
-                                id="checkbox" 
+                            <input
+                                style={styles.checkboxStyle}
+                                type="checkbox"
+                                id="checkbox"
                                 value="Ich stimme der Speicherung der Daten zur Verarbeitung im Sinne der DSGVO zu."
                                 required
-                                ></input>
+                            ></input>
                             <span>Ich stimme der Speicherung der Daten zur Verarbeitung im Sinne der DSGVO zu.</span>
                         </td>
                     </tr>
@@ -193,10 +192,17 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                                 type="submit"
                                 id="submit"
                                 /*onClick={() => this.setCurrentPage(11)}*/>Nachricht senden</button>
+
+                            <button
+                                style={styles.skipButtonStyle}
+                                type="button"
+                                id="skip"
+                                title="Ohne Angabe von Daten weiter"
+                                onClick={() => window.open('https://www.verbandskasten-spenden.de/spenden/danke/', "_self")}>Überspringen</button>
                         </td>
                     </tr>
                 </table>
-                </form>
-            );
-        }
+            </form>
+        );
+    }
 }

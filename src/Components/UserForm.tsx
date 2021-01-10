@@ -120,7 +120,7 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                                 name="name"
                                 required
                                 placeholder="Name (*)"
-                                aria-aria-required="true"
+                                // aria-aria-required="true"
                                 onChange={e => {
                                     this.handleChange(e);
                                 }}
@@ -198,7 +198,7 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                                 type="button"
                                 id="skip"
                                 title="Ohne Angabe von Daten weiter"
-                                onClick={() => window.open('https://www.verbandskasten-spenden.de/spenden/danke/', "_self")}>Überspringen</button>
+                                onClick={() => window.open('https://www.verbandskasten-spenden.de/spenden/adresse/', "_self")}>Überspringen</button>
                         </td>
                     </tr>
                 </table>

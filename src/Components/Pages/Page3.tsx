@@ -1,5 +1,4 @@
 import React from "react";
-import PageProps from "../PageProps";
 import { BasePage } from "../BasePage";
 import { Layout } from "../Layout";
 import * as styles from "../css/PageStyle";
@@ -9,9 +8,7 @@ import PersonType from "../PersonType";
 
 
 export class Page3 extends BasePage {
-  constructor (props: PageProps) {
-    super(props);
-  }
+
   render(): React.ReactElement {
     return (
       <Layout className="regularPage">

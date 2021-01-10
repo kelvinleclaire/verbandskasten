@@ -1,20 +1,20 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { Page2 } from "./Components/Pages/Page2";
-import { Page1 } from "./Components/Pages/Page1";
-import { Page3 } from "./Components/Pages/Page3";
-import { Page4 } from "./Components/Pages/Page4";
-import { Page5 } from "./Components/Pages/Page5";
-import { Page6 } from "./Components/Pages/Page6";
-import { Page7 } from "./Components/Pages/Page7";
-import { Page8 } from "./Components/Pages/Page8";
-import { Page9 } from "./Components/Pages/Page9";
-import { Page10 } from "./Components/Pages/Page10";
-import { Page11 } from "./Components/Pages/Page11";
-import { Page12 } from "./Components/Pages/Page12";
-import { SmallUserForm } from "./Components/SmallUserForm";
-import PersonType from "./Components/PersonType";
+import './App.css';
+
+import React from 'react';
+
+import { Page1 } from './Components/Pages/Page1';
+import { Page10 } from './Components/Pages/Page10';
+import { Page11 } from './Components/Pages/Page11';
+import { Page12 } from './Components/Pages/Page12';
+import { Page2 } from './Components/Pages/Page2';
+import { Page3 } from './Components/Pages/Page3';
+import { Page4 } from './Components/Pages/Page4';
+import { Page5 } from './Components/Pages/Page5';
+import { Page6 } from './Components/Pages/Page6';
+import { Page7 } from './Components/Pages/Page7';
+import { Page8 } from './Components/Pages/Page8';
+import { Page9 } from './Components/Pages/Page9';
+import PersonType from './Components/PersonType';
 
 type MainProps = {};
 type MainState = {
@@ -26,9 +26,9 @@ type MainState = {
 };
 
 export default class Main extends React.Component<MainProps, MainState> {
-  constructor(props: MainProps) {
+  constructor (props: MainProps) {
     super(props);
-    this.state = { currentPersonType: PersonType.Unknown, currentFrequency:"", currentPage: 1, previousPage: 0 ,pageHistory:new Array<number>()};
+    this.state = { currentPersonType: PersonType.Unknown, currentFrequency: "", currentPage: 1, previousPage: 0, pageHistory: new Array<number>() };
   }
   render(): React.ReactElement {
     return (
@@ -164,27 +164,25 @@ export default class Main extends React.Component<MainProps, MainState> {
   }
 
   private setCurrentPage(openPage: number, personType: PersonType, frequency: String): void {
-    let history :Array<number> = this.state.pageHistory;
-    let localFrequency: String ="";
-    if(frequency !== "")
-    {
-      localFrequency=frequency;
+    let history: Array<number> = this.state.pageHistory;
+    let localFrequency: String = "";
+    if (frequency !== "") {
+      localFrequency = frequency;
     }
-    let localPersontype: PersonType=PersonType.Unknown;
-    if(personType !== PersonType.Unknown)
-    {
-      localPersontype=personType;
+    let localPersontype: PersonType = PersonType.Unknown;
+    if (personType !== PersonType.Unknown) {
+      localPersontype = personType;
     }
     history.push(this.state.currentPage);
-    this.setState({ currentPage: openPage, currentPersonType: localPersontype, pageHistory:history, currentFrequency: localFrequency });
+    this.setState({ currentPage: openPage, currentPersonType: localPersontype, pageHistory: history, currentFrequency: localFrequency });
   }
   private goBack(): void {
-    let history :Array<number> = this.state.pageHistory;
-    let safeCurrentPage: number|undefined = history.pop();
-    if(safeCurrentPage) {
-      this.setState({ currentPage: safeCurrentPage,pageHistory:history });
+    let history: Array<number> = this.state.pageHistory;
+    let safeCurrentPage: number | undefined = history.pop();
+    if (safeCurrentPage) {
+      this.setState({ currentPage: safeCurrentPage, pageHistory: history });
     } else {
-      this.setState({ currentPage: 1,pageHistory:history });
+      this.setState({ currentPage: 1, pageHistory: history });
     }
   }
 }

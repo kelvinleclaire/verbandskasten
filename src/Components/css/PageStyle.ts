@@ -1,5 +1,4 @@
 import CSS from "csstype";
-import { url } from "inspector";
 import backgroundImg from "../../Assets/background.png";
 import "./PageStyle.css";
 

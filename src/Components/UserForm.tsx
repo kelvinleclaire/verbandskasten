@@ -159,6 +159,20 @@ export class UserForm extends React.Component<FormProps, IFormState> {
                     </tr>
                     <tr>
                         <td>
+                            <input
+                                style={styles.inputStyle}
+                                type="string"
+                                id="phone"
+                                name="phone"
+                                placeholder="Telefonnummer (optional)"
+                                onChange={e => {
+                                    this.handleChange(e);
+                                }}
+                            ></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <textarea
                                 style={styles.textAriaStyle}
                                 id="message"
